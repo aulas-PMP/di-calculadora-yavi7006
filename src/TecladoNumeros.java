@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class Teclado extends JPanel{
+public class TecladoNumeros extends JPanel{
     
-    public Teclado(){
+    public TecladoNumeros(){
 
         JButton bt0 = new JButton("0");
         JButton bt1 = new JButton("1");
@@ -21,17 +21,18 @@ public class Teclado extends JPanel{
         JButton bt8 = new JButton("8");
         JButton bt9 = new JButton("9");
 
-        JButton bt10 = new JButton("+");
-        JButton bt11 = new JButton("-");
-        JButton bt12 = new JButton("*");
-        JButton bt13 = new JButton("/");
+        setLayout(new GridLayout(4, 3));
 
-        JButton bt14 = new JButton("C");
-        JButton bt15 = new JButton("=");
-
-        JButton bt16 = new JButton(".");
-
-        setLayout(new GridLayout(5, 5));
+        bt1.setForeground(Color.WHITE);
+        bt2.setForeground(Color.WHITE);
+        bt3.setForeground(Color.WHITE);
+        bt4.setForeground(Color.WHITE);
+        bt5.setForeground(Color.WHITE);
+        bt6.setForeground(Color.WHITE);
+        bt7.setForeground(Color.WHITE);
+        bt8.setForeground(Color.WHITE);
+        bt9.setForeground(Color.WHITE);
+        bt0.setForeground(Color.WHITE);
 
         add(bt1);
         bt1.setBackground(Color.GRAY);
@@ -39,6 +40,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "1";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -48,6 +50,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "2";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -57,16 +60,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "3";
-            }
-        });
-        
-        add(bt10);
-        bt10.setBackground(Color.GRAY);
-        bt10.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Calculadora.operacion += "+";
-                Calculadora.signo.add('+');
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -76,6 +70,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "4";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -85,6 +80,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "5";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -94,16 +90,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "6";
-            }
-        });
-        
-        add(bt11);
-        bt11.setBackground(Color.GRAY);
-        bt11.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Calculadora.operacion += "-";
-                Calculadora.signo.add('-');
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -113,6 +100,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "7";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -122,6 +110,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "8";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -131,25 +120,7 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "9";
-            }
-        });
-        
-        add(bt12);
-        bt12.setBackground(Color.GRAY);
-        bt12.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Calculadora.operacion += "*";
-                Calculadora.signo.add('*');
-            }
-        });
-        
-        add(bt14);
-        bt14.setBackground(Color.GRAY);
-        bt14.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
@@ -159,35 +130,9 @@ public class Teclado extends JPanel{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 Calculadora.operacion += "0";
+                Calculadora.label.setText(Calculadora.operacion);
             }
         });
         
-        add(bt15);
-        bt15.setBackground(Color.GRAY);
-        bt15.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Calculadora.operar();
-            }
-        });
-        
-        add(bt13);
-        bt13.setBackground(Color.GRAY);
-        bt13.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Calculadora.operacion += "/";
-                Calculadora.signo.add('/');
-            }
-        });
-
-        add(bt16);
-        bt16.setBackground(Color.GRAY);
-        bt16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Calculadora.operacion += ".";
-            }
-        });
     }
 }
