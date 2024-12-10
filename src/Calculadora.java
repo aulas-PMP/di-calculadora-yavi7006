@@ -127,6 +127,7 @@ public class Calculadora extends JFrame{
         Calculadora.calc.add(Calculadora.calc.modo,BorderLayout.CENTER);
         Calculadora.calc.modo.setBackground(Color.ORANGE);
         Calculadora.calc.modo.setFont(new Font(Calculadora.calc.modo.getFont().getFontName(), Calculadora.calc.modo.getFont().getStyle(), 15));
+        Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/2/3,altura));
         Calculadora.calc.modo.addActionListener(new ModoAction());
 
         Calculadora.calc.pd = new PadNumerico();
@@ -137,9 +138,11 @@ public class Calculadora extends JFrame{
                 if(e.getNewState()==MAXIMIZED_BOTH){
                     Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/3, altura));
                     Calculadora.calc.tcl2.setPreferredSize(new Dimension(ancho/3, altura));
+                    Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/3,altura));
                 } else if(e.getNewState()==NORMAL){
                     Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/2/3,altura));
                     Calculadora.calc.tcl2.setPreferredSize(new Dimension(ancho/2/3,altura));
+                    Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/2/3,altura));
                 }
             }
         });

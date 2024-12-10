@@ -44,7 +44,7 @@ public class TecladoNumeros extends JPanel{
         bt8.setForeground(Color.WHITE);
         bt9.setForeground(Color.WHITE);
         bt0.setForeground(Color.WHITE);
-
+        
         bt0.setFont(new Font(this.getFont().getFontName(), this.getFont().getStyle(), 30));
         bt1.setFont(new Font(this.getFont().getFontName(), this.getFont().getStyle(), 30));
         bt2.setFont(new Font(this.getFont().getFontName(), this.getFont().getStyle(), 30));

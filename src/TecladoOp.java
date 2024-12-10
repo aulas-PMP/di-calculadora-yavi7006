@@ -55,7 +55,7 @@ public class TecladoOp extends JPanel{
         bt16.setBackground(Color.GRAY);
         add(bt17);
         bt17.setBackground(Color.GRAY);
-
+        
         bt10.setFont(new Font(this.getFont().getFontName(), this.getFont().getStyle(), 30));
         bt11.setFont(new Font(this.getFont().getFontName(), this.getFont().getStyle(), 30));
         bt12.setFont(new Font(this.getFont().getFontName(), this.getFont().getStyle(), 30));
