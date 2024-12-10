@@ -58,7 +58,14 @@ public class Calculadora extends JFrame{
                 default:
                     break;
             }
+            
             Calculadora.calc.resultado += String.valueOf(result);
+            if(Calculadora.calc.resultado.endsWith(".0")){
+                Calculadora.calc.resultado = Calculadora.calc.resultado.substring(0, Calculadora.calc.resultado.indexOf("."));
+            }
+            if(Calculadora.calc.operacion.contains(",")){
+                Calculadora.calc.resultado = Calculadora.calc.resultado.replace(".", ",");
+            }
             if(result<0){
                 Calculadora.calc.label.setForeground(Color.RED);
             }
