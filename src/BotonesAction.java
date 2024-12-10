@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,6 +12,7 @@ public class BotonesAction implements ActionListener{
 
         switch (boton.getText()) {
             case "0","1","2","3","4","5","6","7","8","9":
+                Calculadora.calc.label.setForeground(Color.BLACK);
                 Calculadora.calc.operacion += boton.getText();
                 if(Calculadora.calc.signo.isBlank()){
                     Calculadora.calc.num1 += boton.getText();

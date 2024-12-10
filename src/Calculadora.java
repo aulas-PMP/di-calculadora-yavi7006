@@ -60,11 +60,10 @@ public class Calculadora extends JFrame{
             }
             Calculadora.calc.resultado += String.valueOf(result);
             if(result<0){
-                Calculadora.calc.setForeground(Color.RED);
+                Calculadora.calc.label.setForeground(Color.RED);
             }
             Calculadora.calc.label.setText(Calculadora.calc.resultado);
             Calculadora.calc.resultado = "";
-            Calculadora.calc.setForeground(Color.BLACK);
         } catch(NumberFormatException e){
             Calculadora.calc.resultado = "SYNTAX ERROR";
             Calculadora.calc.label.setText(Calculadora.calc.resultado);
