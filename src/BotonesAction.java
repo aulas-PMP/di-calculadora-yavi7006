@@ -21,10 +21,25 @@ public class BotonesAction implements ActionListener{
                 }
                 Calculadora.calc.label.setText(Calculadora.calc.operacion);
                 break;
-            case "+","-","*","/":
+            case "+","*","/":
+                if(Calculadora.calc.signo.isBlank()){
+                    Calculadora.calc.operacion += boton.getText();
+                    Calculadora.calc.signo = boton.getText();
+                    Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                }
+                break;
+            case "-":
+                Calculadora.calc.label.setForeground(Color.BLACK);
+                if(Calculadora.calc.num1.isBlank()){
+                    Calculadora.calc.num1 += boton.getText();
+                } else if(Calculadora.calc.signo.isBlank()){
+                    Calculadora.calc.signo = boton.getText();
+                } else if(Calculadora.calc.num2.isBlank()){
+                    Calculadora.calc.num2 += boton.getText();
+                }
                 Calculadora.calc.operacion += boton.getText();
-                Calculadora.calc.signo = boton.getText();
                 Calculadora.calc.label.setText(Calculadora.calc.operacion);
+
                 break;
             case "C":
                 Calculadora.calc.operacion = "";

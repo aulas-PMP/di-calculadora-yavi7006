@@ -110,21 +110,27 @@ public class PadNumerico extends KeyAdapter{
                 break;
             case 106:
                 Calculadora.calc.label.setForeground(Color.BLACK);
-                Calculadora.calc.operacion += "*";
-                Calculadora.calc.signo = String.valueOf("*");
-                Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                if(Calculadora.calc.signo.isBlank()){
+                    Calculadora.calc.operacion += "*";
+                    Calculadora.calc.signo = String.valueOf("*");
+                    Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                }
                 break;
             case 107:
                 Calculadora.calc.label.setForeground(Color.BLACK);
-                Calculadora.calc.operacion += "+";
-                Calculadora.calc.signo = String.valueOf("+");
-                Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                if(Calculadora.calc.signo.isBlank()){
+                    Calculadora.calc.operacion += "+";
+                    Calculadora.calc.signo = String.valueOf("+");
+                    Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                }
                 break;
             case 109:
                 Calculadora.calc.label.setForeground(Color.BLACK);
-                Calculadora.calc.operacion += "-";
-                Calculadora.calc.signo = String.valueOf("-");
-                Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                if(Calculadora.calc.signo.isBlank()){
+                    Calculadora.calc.operacion += "-";
+                    Calculadora.calc.signo = String.valueOf("-");
+                    Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                }
                 break;
             case 110:
                 Calculadora.calc.label.setForeground(Color.BLACK);
@@ -138,9 +144,11 @@ public class PadNumerico extends KeyAdapter{
                 break;
             case 111:
                 Calculadora.calc.label.setForeground(Color.BLACK);
-                Calculadora.calc.operacion += "/";
-                Calculadora.calc.signo = String.valueOf("/");
-                Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                if(Calculadora.calc.signo.isBlank()){
+                    Calculadora.calc.operacion += "/";
+                    Calculadora.calc.signo = String.valueOf("7");
+                    Calculadora.calc.label.setText(Calculadora.calc.operacion);
+                }
                 break;
             case 8:
                 Calculadora.calc.label.setForeground(Color.BLACK);

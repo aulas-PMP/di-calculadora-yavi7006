@@ -135,14 +135,16 @@ public class Calculadora extends JFrame{
         Calculadora.calc.addWindowStateListener(new WindowStateListener() {
             @Override
             public void windowStateChanged(WindowEvent e) {
+                int anc = e.getWindow().getWidth();
+                int alt = e.getWindow().getHeight();
                 if(e.getNewState()==MAXIMIZED_BOTH){
-                    Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/3, altura));
-                    Calculadora.calc.tcl2.setPreferredSize(new Dimension(ancho/3, altura));
-                    Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/3,altura));
+                    Calculadora.calc.tcl.setPreferredSize(new Dimension(anc/3, alt));
+                    Calculadora.calc.tcl2.setPreferredSize(new Dimension(anc/3, alt));
+                    Calculadora.calc.tcl.setPreferredSize(new Dimension(anc/3,alt));
                 } else if(e.getNewState()==NORMAL){
-                    Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/2/3,altura));
-                    Calculadora.calc.tcl2.setPreferredSize(new Dimension(ancho/2/3,altura));
-                    Calculadora.calc.tcl.setPreferredSize(new Dimension(ancho/2/3,altura));
+                    Calculadora.calc.tcl.setPreferredSize(new Dimension(anc/2/3,alt));
+                    Calculadora.calc.tcl2.setPreferredSize(new Dimension(anc/2/3,alt));
+                    Calculadora.calc.tcl.setPreferredSize(new Dimension(anc/2/3,alt));
                 }
             }
         });
